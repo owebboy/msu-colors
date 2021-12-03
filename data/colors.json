@@ -1,0 +1,47 @@
+{
+  "primaryColors": [
+    {
+      "name": "Spartan Green",
+      "color": "#18443B"
+    },
+    {
+      "name": "White",
+      "color": "#FFFFFF"
+    },
+    {
+      "name": "Black",
+      "color": "#000000"
+    }
+  ],
+  "secondaryColors": [
+    {
+      "name": "Kelly Green",
+      "color": "#008208"
+    },
+    {
+      "name": "Lime Green",
+      "color": "#7BBD00"
+    },
+    {
+      "name": "Excellence Green",
+      "color": "#0B9A6D"
+    }
+  ],
+  "tints": {
+    "black": [
+      ["#578800", "#7DC400", "#A8FF0D", "#CCFA7D", "#FFFFFF"],
+      ["#008208", "#00BF10", "#42FF4F", "#8CFF98", "#FFFFFF"],
+      ["#0B9A6D", "#49CFA5", "#87FFD9", "#C3FFEC", "#FFFFFF"]
+    ],
+    "white": [
+      ["#000000", "#172600", "#304D00", "#497300", "#639B00"],
+      ["#000000", "#022400", "#044700", "#066B00", "#089000"],
+      ["#000000", "#022117", "#044C36", "#077351", "#0B9A6D"]
+    ],
+    "spartanGreen": [
+      ["#7DC400", "#A8FF0D", "#CCFA7D", "#FFFFFF"],
+      ["#01C300", "#7BBD00", "#00C280", "#FFFFFF"],
+      ["#49CFA5", "#87FFD9", "#C3FFEC", "#FFFFFF"]
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.color {
+  @apply select-all;
+}
+
+a {
+  @apply text-green-500 transition-colors hover:text-green-900;
+}
