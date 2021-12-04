@@ -28,7 +28,7 @@ export default function Home() {
           />
         </header>
 
-        <div className="m-1">
+        <div className="mx-auto lg:w-3/4 mx-auto">
           <h2 className="text-2xl text-center mb-2">Primary Colors</h2>
           <div className="grid md:grid-cols-3 lg:w-3/4 mx-auto">
             {colors.primaryColors.map((c, i) => (
@@ -46,7 +46,7 @@ export default function Home() {
           <h2 className="text-2xl text-center my-2">Accessible Tints</h2>
 
           <h3 className="text-xl text-center mb-2">On Black</h3>
-          <div className="shadow-lg bg-black w-full h-96 flex flex-col items-center justify-center rounded-lg">
+          <div className="bg-black accessible-background">
             {colors.tints.black.map((v, i) => (
               <Variant key={i} tint="black" vari={i} colors={v} />
             ))}
@@ -55,7 +55,7 @@ export default function Home() {
           <h3 className="text-xl text-center my-2">On Spartan Green</h3>
           <div
             style={{ backgroundColor: colors.primaryColors[0].color }}
-            className="shadow-lg w-full h-96 flex flex-col items-center justify-center rounded-lg"
+            className="accessible-background"
           >
             {colors.tints.spartanGreen.map((v, i) => (
               <Variant key={i} tint="spartanGreen" vari={i} colors={v} />
@@ -63,7 +63,7 @@ export default function Home() {
           </div>
 
           <h3 className="text-xl text-center my-2">On White</h3>
-          <div className="shadow-lg bg-white w-full h-96 flex flex-col items-center justify-center rounded-lg border border-gray-500 ">
+          <div className="accessible-background border-t border-b">
             {colors.tints.white.map((v, i) => (
               <Variant key={i} tint="white" vari={i} colors={v} />
             ))}

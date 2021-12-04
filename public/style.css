@@ -9,3 +9,7 @@
 a {
   @apply text-green-500 transition-colors hover:text-green-900;
 }
+
+.accessible-background {
+    @apply shadow-lg flex flex-col items-center justify-center md:rounded-lg w-full py-4 md:w-full mx-auto xl:w-3/4;
+}
