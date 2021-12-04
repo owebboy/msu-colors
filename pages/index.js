@@ -12,6 +12,8 @@ export default function Home() {
   return (
     <main>
       <Head>
+        <title>MSU Colors</title>
+        <meta name="description" content="MSU Colors provided by brand.msu.edu." />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
