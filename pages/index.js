@@ -28,7 +28,7 @@ export default function Home() {
           />
         </header>
 
-        <div className="mx-auto lg:w-3/4 mx-auto">
+        <div className="mx-auto lg:w-3/4">
           <h2 className="text-2xl text-center mb-2">Primary Colors</h2>
           <div className="grid md:grid-cols-3 lg:w-3/4 mx-auto">
             {colors.primaryColors.map((c, i) => (
@@ -91,7 +91,7 @@ export default function Home() {
         className="transition-all ease-in-out fixed w-full h-24 bottom-0 left-0 backdrop-filter backdrop-blur z-30 bg-opacity-70 border-t flex flex-col shadow drop-shadow-2xl"
       >
         <div className="container mx-auto px-5 flex justify-between items-center h-full">
-          <div className="text-3xl font-light uppercase tracking-widest">
+          <div className="hidden md:block text-3xl font-light uppercase tracking-widest">
             {sharedState.color}
           </div>
           <div className="text-center">
