@@ -25,7 +25,7 @@ function ColorSpot({ color, tint, vari }) {
         backgroundColor: color,
         color: colorProps.fgColor,
       }}
-      className="focus:outline-none focus-within:ring ring-offset-2 focus-within:ring-transparent w-12 h-12 m-2 text-xs md:w-20 md:h-20 md:m-6 rounded-md drop-shadow-sm border-2 border-transparent flex items-center justify-center transition-all hover:drop-shadow-2xl select-none cursor-pointer"
+      className="focus:outline-none focus-within:ring ring-offset-2 focus-within:ring-transparent focus-within:ring-black focus-within:ring-opacity-50 w-12 h-12 m-2 text-xs md:w-20 md:h-20 md:m-6 rounded-md drop-shadow-sm border-2 border-transparent flex items-center justify-center transition-all hover:drop-shadow-2xl select-none cursor-pointer"
       onMouseLeave={(e) => setToggle(false)}
       onMouseEnter={(e) => setToggle(true)}
       onClick={(e) =>
