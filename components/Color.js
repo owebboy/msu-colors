@@ -20,18 +20,21 @@ export default function Color({ color, name }) {
 
   return (
     <div className="m-3 border border-gray-300 rounded-lg shadow-lg p-2">
-      <div
+      <button
+        tabIndex="0"
+        aria-checked="false"
+        role="radio"
         style={{
           backgroundColor: color,
           border: `1px solid ${borderColor}`,
         }}
-        className="w-full h-32 shadow-sm rounded-md cursor-pointer select-none transition-all hover:drop-shadow-lg"
+        className="focus:outline-none focus-within:ring ring-offset-2 focus-within:ring-black focus-within:ring-opacity-50 w-full h-32 shadow-sm rounded-md cursor-pointer select-none transition-all hover:drop-shadow-lg"
         onClick={(e) => {
           sharedState.hash === colorAttributes.hash
             ? setSharedState({})
             : setSharedState(colorAttributes);
         }}
-      ></div>
+      ></button>
 
       <div className="p-3">
         <h3 className="uppercase leading-3 tracking-wider text-gray-800 border-b pb-2 mb-1">

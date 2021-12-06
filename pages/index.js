@@ -19,7 +19,7 @@ export default function Home() {
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.webmanifest" />
       </Head>
-      <div className="container mx-auto mb-48">
+      <div className="container mx-auto mb-48" role="radiogroup">
         <header className="flex flex-col items-start justify-center my-10 w-max mx-auto">
           <h1 className="text-5xl font-semibold">MSU Colors</h1>
           <hr
