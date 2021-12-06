@@ -34,10 +34,10 @@ export function ColorSpot({ color, tint, vari, name=null, featured=false }) {
         color: colorProps.fgColor,
       }}
       className={cn(
-        selected && featured ? cn('ring ring-black') : '',
+        selected && featured ? cn('ring ring-blue-500 ring-offset-white ring-offset-2') : '',
         selected && !featured ? cn((tint == "white" ? "ring-black" : "ring-white"), tint=='spartanGreen'?'ring-offset-green-spartan':tint=='white'?'ring-offset-white':'ring-offset-black', 'ring ring-offset-4'):"",
         featured?'w-full h-32 shadow-sm':"w-12 h-12 md:w-20 md:h-20 md:m-6 m-2",
-        featured && color=='#FFFFFF'?'border border-gray-400':"",
+        featured && color=='#FFFFFF'?'border border-gray-500':"",
         "focus:outline-none  text-xs  rounded-md drop-shadow-sm border-transparent flex items-center justify-center transition-all hover:drop-shadow-lg select-none cursor-pointer"
       )}
       onMouseLeave={(e) => setToggle(false)}

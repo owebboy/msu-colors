@@ -79,8 +79,9 @@ export default function Home() {
       </div>
 
       <div className="text-center py-10 mb-28">
-        Created by <a href="//oliverpope.com">Oliver Pope</a> for{" "}
-        <a href="//msu.edu">MSU. 💚 </a>
+        <p>Created by <a href="//oliverpope.com">Oliver Pope</a> for{" "}
+        <a href="//msu.edu">MSU. 💚 </a></p>
+        <p>Built with <a href="//nextjs.org">Next.js</a> and <a href="//tailwindcss.com">tailwind.css</a></p>
       </div>
 
       <footer
