@@ -20,8 +20,13 @@ export default function Color({ color, name }) {
 
   return (
     <div className="m-3 border border-gray-300 rounded-lg shadow-lg p-2">
-
-      <ColorSpot color={color} tint='na' vari='featured' name={name} featured={true} />
+      <ColorSpot
+        color={color}
+        tint="na"
+        vari="featured"
+        name={name}
+        featured={true}
+      />
 
       <div className="p-3">
         <h3 className="uppercase leading-tight tracking-wider text-gray-800 border-b pb-2 mb-1">

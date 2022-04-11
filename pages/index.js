@@ -3,8 +3,10 @@ import Head from "next/head";
 import { useState } from "react";
 import Color from "../components/Color";
 import { useAppContext } from "../components/Context";
-import { Variant, Swatch } from "../components/Variant";
+import { Variant } from "../components/Variant";
+
 import colors from "../data/colors.json";
+import Selector from "../components/Selector";
 
 export default function Home() {
   const [sharedState, setSharedState] = useAppContext();
@@ -48,40 +50,52 @@ export default function Home() {
         </div>
       </div>
       <div className="md:container mx-auto">
+        <div>
+          <h2 className="text-2xl text-center my-2">Accessible Tints</h2>
 
-      <div>
-        <h2 className="text-2xl text-center my-2">Accessible Tints</h2>
+          <h3 className="text-xl text-center mb-2">On Black</h3>
+          <div className="bg-black accessible-background">
+            {colors.tints.black.map((v, i) => (
+              <Variant key={i} tint="black" vari={i} colors={v} />
+            ))}
+          </div>
 
-        <h3 className="text-xl text-center mb-2">On Black</h3>
-        <div className="bg-black accessible-background">
-          {colors.tints.black.map((v, i) => (
-            <Variant key={i} tint="black" vari={i} colors={v} />
-          ))}
-        </div>
+          <h3 className="text-xl text-center my-2">On Spartan Green</h3>
+          <div
+            style={{ backgroundColor: colors.primaryColors[0].color }}
+            className="accessible-background"
+          >
+            {colors.tints.spartanGreen.map((v, i) => (
+              <Variant key={i} tint="spartanGreen" vari={i} colors={v} />
+            ))}
+          </div>
 
-        <h3 className="text-xl text-center my-2">On Spartan Green</h3>
-        <div
-          style={{ backgroundColor: colors.primaryColors[0].color }}
-          className="accessible-background"
-        >
-          {colors.tints.spartanGreen.map((v, i) => (
-            <Variant key={i} tint="spartanGreen" vari={i} colors={v} />
-          ))}
-        </div>
-
-        <h3 className="text-xl text-center my-2">On White</h3>
-        <div className="accessible-background border-t border-b border-gray-300 md:border-2">
-          {colors.tints.white.map((v, i) => (
-            <Variant key={i} tint="white" vari={i} colors={v} />
-          ))}
+          <h3 className="text-xl text-center my-2">On White</h3>
+          <div className="accessible-background border-t border-b border-gray-300 md:border-2">
+            {colors.tints.white.map((v, i) => (
+              <Variant key={i} tint="white" vari={i} colors={v} />
+            ))}
+          </div>
         </div>
       </div>
+
+      <div className="md:container mx-auto my-11">
+        <div className="accessible-background border">
+          <Selector
+            colors={[...new Set(Object.values(colors.tints).flat(2))]}
+          />
+        </div>
       </div>
 
       <div className="text-center py-10 mb-28">
-        <p>Created by <a href="//oliverpope.com">Oliver Pope</a> for{" "}
-        <a href="//msu.edu">MSU. 💚 </a></p>
-        <p>Built with <a href="//nextjs.org">Next.js</a> and <a href="//tailwindcss.com">tailwind.css</a></p>
+        <p>
+          Created by <a href="//oliverpope.com">Oliver Pope</a> for{" "}
+          <a href="//msu.edu">MSU. 💚 </a>
+        </p>
+        <p>
+          Built with <a href="//nextjs.org">Next.js</a> and{" "}
+          <a href="//tailwindcss.com">tailwind.css</a>
+        </p>
       </div>
 
       <footer

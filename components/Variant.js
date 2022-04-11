@@ -13,16 +13,25 @@ export function Variant({ colors, tint, vari }) {
   );
 }
 
-export function ColorSpot({ color, tint, vari, name=null, featured=false }) {
+export function ColorSpot({
+  color,
+  tint,
+  vari,
+  name = null,
+  featured = false,
+}) {
   const [toggle, setToggle] = useState(false);
   const [selected, setSelected] = useState(false);
   const [mouse, setMouse] = useState(false);
   const [sharedState, setSharedState] = useAppContext();
   const colorProps = getColorProps(color, name, tint, vari);
 
-  useEffect((e) => {
-    setSelected(sharedState.hash == colorProps.hash)
-  }, [sharedState.hash, colorProps.hash])
+  useEffect(
+    (e) => {
+      setSelected(sharedState.hash == colorProps.hash);
+    },
+    [sharedState.hash, colorProps.hash]
+  );
 
   return (
     <button
@@ -34,17 +43,31 @@ export function ColorSpot({ color, tint, vari, name=null, featured=false }) {
         color: colorProps.fgColor,
       }}
       className={cn(
-        selected && featured ? cn('ring ring-blue-500 ring-offset-white ring-offset-2') : '',
-        selected && !featured ? cn((tint == "white" ? "ring-black" : "ring-white"), tint=='spartanGreen'?'ring-offset-green-spartan':tint=='white'?'ring-offset-white':'ring-offset-black', 'ring ring-offset-4'):"",
-        featured?'w-full h-32 shadow-sm':"w-12 h-12 md:w-20 md:h-20 md:m-6 m-2",
-        featured && color=='#FFFFFF'?'border border-gray-500':"",
+        selected && featured
+          ? cn("ring ring-blue-500 ring-offset-white ring-offset-2")
+          : "",
+        selected && !featured
+          ? cn(
+              tint == "white" ? "ring-black" : "ring-white",
+              tint == "spartanGreen"
+                ? "ring-offset-green-spartan"
+                : tint == "white"
+                ? "ring-offset-white"
+                : "ring-offset-black",
+              "ring ring-offset-4"
+            )
+          : "",
+        featured
+          ? "w-full h-32 shadow-sm"
+          : "w-12 h-12 md:w-20 md:h-20 md:m-6 m-2",
+        featured && color == "#FFFFFF" ? "border border-gray-500" : "",
         "focus:outline-none  text-xs  rounded-md drop-shadow-sm border-transparent flex items-center justify-center transition-all hover:drop-shadow-lg select-none cursor-pointer"
       )}
       onMouseLeave={(e) => setToggle(false)}
       onMouseEnter={(e) => setToggle(true)}
       onMouseDown={(e) => setMouse(true)}
       onFocus={(e) => {
-        if (!mouse) { 
+        if (!mouse) {
           setSharedState(colorProps);
         }
         setMouse(false);
